@@ -1,0 +1,251 @@
+<html prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+  <title>Notes on metabolic modelling analysis</title>
+  <meta name="description" content="Reconstruction, biased and unbiased methods." />
+
+
+  <meta property="og:title" content="Notes on metabolic modelling analysis" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:secure_url"
+    content="https://hariszaf.github.io/notes-on-met-mod-analysis/_images/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="book logo" />
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@haris_zaf" />
+  <meta name="twitter:title" content="Notes on metabolic modelling analysis" />
+  <meta name="twitter:description" content="a how-to with some basic background and applications" />
+  <meta name="twitter:image" content="https://hariszaf.github.io/notes-on-met-mod-analysis/_images/logo.png" />
+
+
+  <script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Book",
+	"name": "Notes on metabolic modelling analysis",
+  "about": "a how-to with some basic background and applications"
+	"image": "https://hariszaf.github.io/notes-on-met-mod-analysis/_images/logo.png",
+}
+</script>
+
+  <PageMap>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="https://hariszaf.github.io/notes-on-met-mod-analysis/_images/logo.png" />
+    </DataObject>
+  </PageMap>
+
+  <meta name="thumbnail" content="https://hariszaf.github.io/notes-on-met-mod-analysis/_images/logo.png" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <style type="text/css">
+    body {
+      background-color: #FFFFFF;
+      font-family: Optima, Palatino, Arial, sans-serif, Helvetica;
+      padding: 0ex 0ex 0ex 0ex;
+      margin: 0ex 0ex 0ex 0ex;
+    }
+
+    hr {
+      border: 0;
+      width: 90%;
+      height: 2px;
+      color: #e3e7ef;
+      background-color: #e3e7ef;
+      margin: 3ex 2ex 0ex 0ex;
+    }
+
+    h1 {
+      font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+      color: #333333;
+      font-size: 2.7em;
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+      color: #333333;
+      font-size: 1.7em;
+      padding-bottom: 0.5em;
+    }
+
+    h3 {
+      font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+      color: #444444;
+    }
+
+    h4 {
+      font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+      color: #777777;
+      padding: 0.5em;
+    }
+
+    big {
+      font-size: 1.3em;
+    }
+
+    spam {
+      color: #ffffff;
+    }
+
+    a {
+      padding: .2em;
+    }
+
+    html {
+      font-size: 18px !important
+    }
+
+    @media (pointer: coarse) {
+      a {
+        padding: .4em;
+      }
+    }
+
+    img {
+      max-width: 300px;
+    }
+
+    a:link {
+      color: #444444;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #444444;
+    }
+
+    a:hover {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: #000000;
+    }
+
+    p.small {
+      font-variant: small-caps;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-flow: row nowrap;
+      margin: 10%;
+    }
+
+    @media screen and (max-width:600px) {
+      .box {
+        flex-flow: column nowrap;
+      }
+    }
+  </style>
+
+
+  <style type=text/css>
+    #book-logo {
+      border: black;
+      border-width: thin;
+      border-style: solid;
+      max-width: 70%;
+      height: auto;
+    }
+
+    #citation {
+      font-size: 10px;
+      background: lightgray;
+      padding: 10px;
+      font-family: monospace;
+      width: 80%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box">
+
+
+    <div style="flex: 0 0 50%; margin-bottom: 10px;">
+      <a href="https://hariszaf.github.io/notes-on-met-mod-analysis/cover.html">
+        <img id="book-logo" src="book-logo.png" alt="Book Logo">
+      </a>
+    </div>
+
+    <div style="flex: 0 0 50%; padding-bottom: 2em; text-align: left;">
+      <h1>Notes on metabolic modelling analysis</h1>
+      <h2>a <i>how-to</i> with some basic background and applications</h2>
+
+      <h2>By <a href="https://hariszaf.github.io/about/">Haris Zafeiropoulos</a></h2>
+
+      <img alt="Static Badge" src="https://img.shields.io/badge/status-in_reparation-brightgreen?style=for-the-badge">
+
+      <p><b><i>Notes on metabolic modelling analysis</i> uses examples and
+          invokes several tools and libraries to explain the ideas behind various types of metabolic modelling
+          analysis!</b>
+        Some basic background on genome scale metabolic reconstructions might be expected.</p>
+
+      <p><b><i>Notes on metabolic modelling analysis</i> is executable!</b>
+        Each chapter is actually generated from Python code. If you view the
+        HTML version of the book, you can click on the "Launch Binder" icon
+        at the top of each page to start an interactive version of that
+        chapter.</p>
+
+      <p>
+      <ul>
+
+        <li><b><a href="https://hariszaf.github.io/notes-on-met-mod-analysis/cover.html">Click
+              here to read the HTML version</a></b>
+
+        <li><b><a href="book.pdf">Click here to download the PDF version</a></b>
+
+      </ul>
+      </p>
+
+      <p>
+        <b>
+          <i>Notes on metabolic modelling analysis</i>
+          is a living, open-source book.
+        </b>
+        Comments, suggestions, and
+        contributions via issues and pull requests
+        on <a href="https://github.com/hariszaf/notes-on-met-mod-analysis">the GitHub
+          repository are more than welcome! </a>.
+      </p>
+
+
+      <!-- <p>Please use the following to cite the book:</p>
+
+      <div id="citation">
+        @book{near_abuah_2021,<br>
+        &nbsp;&nbsp; title={Notes on metabolic modelling analysis},<br>
+        &nbsp;&nbsp; author={Haris Zafeiropoulos},<br>
+        &nbsp;&nbsp; volume={1},<br>
+        &nbsp;&nbsp; url={https://hariszaf.github.io/notes-on-met-mod-analysis/cover.html}, <br>
+        &nbsp;&nbsp; year={2024}<br>
+        }<br>
+      </div>
+    </div> -->
+
+
+    </div>
+
+</body>
+
+</html>
